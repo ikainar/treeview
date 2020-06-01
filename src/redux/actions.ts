@@ -1,9 +1,9 @@
 import { State } from "./index";
 import { TreeItemView } from "../components/TreeItem/TreeItem.types";
 
-export type Action<T = string, PL = {}> = {
-  type: T;
-} & PL;
+type Action<TType extends string = string, TPayload extends object = {}> = {
+  type: TType
+} & TPayload;
 
 export type AddRootTreeItemAction = Action<
   "ADD_ROOT_TREE_ITEM",

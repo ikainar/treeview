@@ -1,5 +1,4 @@
-import { Reducer } from "redux";
-import { combineReducers } from "redux";
+import { Reducer, combineReducers } from "redux";
 
 import { State } from "./state";
 import {
@@ -74,7 +73,7 @@ export const treeItemIdOnEditMode: Reducer<
     : id;
 };
 
-export const rootReducer = combineReducers<State, any>({
+export const rootReducer = combineReducers({
   treeItems,
   treeItemIdOnEditMode,
 });
